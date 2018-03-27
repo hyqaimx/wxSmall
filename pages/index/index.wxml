@@ -1,0 +1,84 @@
+<!--pages/index1/index1.wxml-->
+<view class='top-search'>
+  <view class='search-title'>搜索</view>
+  <input type='text' placeholder='文化惠民，乐享京西' bindinput="bindReplaceInput"></input>
+  <image src='/resource/images/search.png'></image>
+</view>
+<view class='img-contain'>
+  <swiper>
+    <block wx:for="{{slide}}" wx:for-item="item" wx:key="item.id">
+      <swiper-item>
+        <navigator url='/pages/detail/detail?id={{item.id}}'>
+          <image src='{{item.thumb}}'></image>
+          <view class='tag'>
+            <view class='tag-name'>{{item.title}}</view>
+            <view class='tag-other'>
+              <view class='block'></view>
+              <view class='diqu'>门头沟</view>
+            </view>
+          </view>
+        </navigator>
+      </swiper-item>
+    </block>
+  </swiper>
+</view>
+<view class='catalog-title'>
+  <view class='catalog-image-contain'>
+    <image src='/resource/images/title.png' mode='widthFix'></image>
+  </view>
+  <view class='catalog-text'>
+    分类
+  </view>
+</view>
+<view class='catalog'>
+  <block wx:for="{{catalog}}" wx:for-item="item" wx:key="item.id">
+    <view class='item' bindtap='resItem' data-id='{{item.id}}'>
+      <image src='{{item.imgSrc}}' mode='widthFix'></image>
+      <view class='item-title'>{{item.name}}</view>
+    </view>
+  </block>
+
+</view>
+<view class='main-content'>
+  <view class='catalog-title'>
+    <view class='catalog-image-contain'>
+      <image src='/resource/images/title.png' mode='widthFix'></image>
+    </view>
+    <view class='catalog-text'>
+      景区
+    </view>
+  </view>
+  <view class='content'>
+    <block wx:for="{{lists}}" wx:for-item="item" wx:key="item.id">
+      <navigator url='/pages/detail/detail?id={{item.id}}'>
+        <view class='shop-item'>
+          <image class='shop-item-bg' src='/resource/images/1122221.png' mode='widthFix'></image>
+          <image class='shop-item-icon' src='/resource/images/1111.png' mode='widthFix'></image>
+          <view class='shop-item-name'>妙峰山</view>
+        </view>
+      </navigator>
+    </block>
+    <!-- <block wx:for="{{lists}}" wx:for-item="item" wx:key="item.id">
+      <navigator url='/pages/detail/detail?id={{item.id}}'>
+        <view class='card' data-item='{{item}}'>
+          <image src='{{item.thumb}}'></image>
+          <view class='card-other'>
+            <view class='card-name'>{{item.title}}</view>
+            <view class='card-to'>查看更多</view>
+          </view>
+        </view>
+      </navigator>
+    </block> -->
+  </view>
+</view>
+
+<view class='log-bg {{showlog?"":"log-hide"}}'>
+  <view class='log' style='height:{{height/2}}px;'>
+    <view class='log-title'>欢迎页</view>
+    <view class='log-content'>
+      关注门头沟各大景区以及娱乐场所，点亮专属图标，兑换超值礼品，赶快行动
+      <view class='log-bottom'>--最终解释权归门头沟文委所有</view>
+    </view>
+    <view class='log-confirm' bindtap='hide'>我知道了</view>
+  </view>
+</view>

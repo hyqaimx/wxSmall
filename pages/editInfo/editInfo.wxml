@@ -1,0 +1,32 @@
+<!--pages/editInfo/editInfo.wxml-->
+<view class='top-back'>
+  修改信息
+  <navigator open-type='navigateBack' delta='1' class='nav'></navigator>
+</view>
+<section>
+  <view class="edit-area">
+    <view class="edit-contain">
+      <view class="edit-title">头像</view>
+      <view class="edit-content">
+        <image src="/resource/images/gril.jpg" alt="Avatar"></image>
+      </view>
+    </view>
+    <view class="edit-contain">
+      <view class="edit-title">昵称</view>
+      <view class="edit-content">
+        <input type="text" id="name" value="" placeholder="填写你的昵称"/>
+      </view>
+    </view>
+    <view class="edit-contain">
+      <view class="edit-title">性别</view>
+      <view class="edit-content">
+        <radio-group>
+          <radio name="男" value='1' checked='true' color='#F34347'>男</radio>
+          <radio name="女" value='2' color='#F34347'>女</radio>
+          <radio name="保密" value='3' color='#F34347'>保密</radio>
+        </radio-group>
+      </view>
+    </view>
+  </view>
+</section>
+<button class="submit">提交</button>

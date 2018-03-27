@@ -1,0 +1,38 @@
+{
+  "pages":[
+    "pages/index/index",
+    "pages/gift/gift",
+    "pages/mine/mine",
+    "pages/detail/detail",
+    "pages/editInfo/editInfo",
+    "pages/record/record"
+  ],
+  "window":{
+    "backgroundTextStyle":"light",
+    "navigationBarBackgroundColor": "#F34347",
+    "navigationBarTitleText": "WeChat",
+    "navigationBarTextStyle":"white"
+  },
+  "tabBar": {
+    "list": [
+      {
+        "pagePath": "pages/index/index",
+        "text": "首页",
+        "iconPath":"resource/images/index.png",
+        "selectedIconPath":"resource/images/index1.png"
+      },
+      {
+        "pagePath": "pages/gift/gift",
+        "text": "兑换",
+        "iconPath": "resource/images/gift.png",
+        "selectedIconPath":"resource/images/gift1.png"
+      },
+      {
+        "pagePath": "pages/mine/mine",
+        "text": "我的",
+        "iconPath": "resource/images/mine.png",
+        "selectedIconPath": "resource/images/mine1.png"
+      }
+    ]
+  }
+}

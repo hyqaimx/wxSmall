@@ -1,0 +1,13 @@
+/* pages/record/record.wxss */
+page{background: #F5F5F5;}
+.top{display: flex;align-items: center;padding: 20rpx 40rpx 20rpx 20rpx;font-size: 32rpx;margin-bottom: 20rpx;box-shadow: 0 0 3px #C9C9C9;background: white;}
+.top-title{flex: 1;}
+.top-num{color: #F34347;}
+.weui-panel__hd{border-bottom: 1px solid #DCDCDC;padding: 20rpx 30rpx;}
+.weui-panel__hd::after{content: "";position: absolute;width: 3px;height: 40%;left: 15rpx; top: 50%;transform: translateY(-50%);background: #F34347;}
+.weui-media-box{padding: 20rpx;}
+.weui-media-box__title{font-size: 32rpx;}
+.weui-media-box__title_in-text{margin-bottom: 10rpx;}
+.mx-flex{display: flex;align-items: center;}
+.mx-name,.mx-date{flex: 1;}
+.mx-value{font-size: 30rpx;}

@@ -1,0 +1,72 @@
+<!--pages/mine/mine.wxml-->
+<!--头部信息  -->
+<view class='top-contain'>
+  <view class='head-img'>
+    <image src='{{userInfo.avatarUrl?userInfo.avatarUrl:"/resource/images/no-author.png"}}'></image>
+  </view>
+  <view class='user-name'>{{userInfo.nickName?userInfo.nickName:'用户未授权'}}</view>
+  <view class='main-items'>
+    <view class='main-item' bindtap='toRecord'>
+      <view class='item-icon'>
+        订单记录
+      </view>
+      <view class='item-name'>{{orderNum ? orderNum+"条记录" :'获取失败'}}</view>
+    </view>
+    <view class='main-item'>
+      <view class='item-icon'>
+        已点亮
+      </view>
+      <view class='item-name'>{{lightNum?lightNum:'获取失败'}}</view>
+    </view>
+    <view class='main-item'>
+      <view class='item-icon'>
+        关注
+      </view>
+      <view class='item-name'>{{focus?"已关注":"获取失败"}}</view>
+    </view>
+  </view>
+</view>
+<!--操作列表  -->
+<view class='handler-list'>
+  <view class="weui-cells weui-cells_after-title" style='box-shadow: 0px 0px 3px #DCDCDC;'>
+    <navigator url="/pages/gift/gift" open-type="switchTab" class="weui-cell weui-cell_access" hover-class="weui-cell_active">
+      <view class="weui-cell__hd">
+        <image src="/resource/images/edit.png" style="margin-right: 5px;vertical-align: middle;width:20px; height: 20px;"></image>
+      </view>
+      <!-- <view class="weui-cell__bd">个人信息</view>
+      <view class="weui-cell__ft weui-cell__ft_in-access" style='font-size:30rpx;'>点击修改</view>
+    </navigator>
+    <navigator open-type="switchTab" url="/pages/gift/gift" class="weui-cell weui-cell_access" hover-class="weui-cell_active">
+      <view class="weui-cell__hd">
+        <image src="/resource/images/gift.png" style="margin-right: 5px;vertical-align: middle;width:20px; height: 20px;"></image>
+      </view> -->
+      <view class="weui-cell__bd">礼品兑换</view>
+      <view class="weui-cell__ft weui-cell__ft_in-access"></view>
+    </navigator>
+  </view>
+  <!-- <view style='padding:8rpx;'></view> -->
+  <!-- <view class="weui-cells weui-cells_after-title">
+    <navigator url="" class="weui-cell weui-cell_access" hover-class="weui-cell_active">
+      <view class="weui-cell__hd">
+        <image src="/resource/images/complete.png" style="vertical-align: middle;width:25px; height: 26px;"></image>
+      </view>
+      <view class="weui-cell__bd" style='color:#AAA;'>完善信息,点亮专属图标</view>
+      <view class="weui-cell__ft weui-cell__ft_in-access"></view>
+    </navigator>
+  </view> -->
+  <!-- <view style='padding:8rpx;'></view> -->
+  <view class="weui-panel weui-panel_access">
+    <view class="weui-panel__hd" style='font-size:32rpx;font-weight:600;color:#F34347;padding:8px 15px;'>我的图标</view>
+    <view class="weui-panel__bd">
+      <view class="mine-icon-list">
+        <block wx:for="{{icons}}" wx:for-item="item" >
+          <view class="mine-icon-item {{item.active?'active':''}}">
+            <navigator url='/pages/detail/detail?id={{item.id}}' style='width:{{imgSize.width}}rpx;height:{{imgSize.height}}rpx;border-radius:50%;overflow:hidden;'>
+              <image src='{{item.attachurl}}{{item.thumb}}' style='width:{{imgSize.width}}rpx;height:{{imgSize.height}}rpx;border-radius:50%;'></image>
+            </navigator>
+          </view>
+        </block>
+      </view>
+    </view>
+  </view>
+</view>

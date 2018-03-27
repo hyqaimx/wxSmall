@@ -1,0 +1,73 @@
+ <view class="weui-panel">      
+      <view class="weui-panel__bd">
+        <view class="weui-media-box weui-media-box_small-appmsg">
+          <view class="weui-cells weui-cells_in-small-appmsg">
+            <navigator url="" class="weui-cell weui-cell_access" hover-class="weui-cell_active" style='height:60px;'>
+              <view class="weui-cell__hd mokuai_a_a_a" >
+                <image src="{{avatar}}" style="width: 50px;height: 50px;margin-right: 15px" />
+              </view>
+              <view class="weui-cell__bd weui-cell_primary">
+                <view> {{nickname}}</view>
+              </view>
+              <view class="weui-cell__ft weui-cell__ft_in-access " style='color:red'>已点亮{{dianliang}}个</view>
+            </navigator>
+          </view>
+        </view>
+      </view>
+    </view> 
+<block wx:for="{{list}}" wx:for-item="item" wx:key="item.id">
+  <view class="xiaoxi" bindtap='showDialog' data-id='{{item.id}}' data-info='{{item.introduce}}'>
+    <view class="w30">
+      <image src="{{item.thumb}}"></image>
+    </view>
+    <view class="w70">
+      <view>
+        <view class='h5'>{{item.title}}</view>
+      </view>
+      <view class="xiaoxi-view">
+        <view class="xiaoxi-total">商品库存：{{item.kucun}}</view>
+        <view class="xiaoxi-jifen">所需图标：{{item.num}}</view>
+      </view>
+    </view>
+  </view>
+</block>
+<block wx:if="{{showDialog}}">
+  <view class="show-contain" data-id='{{currentInfo.id}}'>
+    <view class="tankuang">
+      <view class="tan-1">
+        <image src="{{currentInfo.thumb}}"></image>
+        <view class="tan-1-info">
+          <view class="tan-1-name">{{currentInfo.title}}</view>
+          <view class="tan-1-other">
+            库存:
+            <em>{{currentInfo.kucun}}</em>
+          </view>
+        </view>
+      </view>
+      <view class="tan-2">
+        <view style="color: #fff;margin: .05rem 0;text-align:center;font-size:14px">配送信息</view>
+        <view class='text'>
+        <view>收件人姓名</view>
+          <input type='text' placeholder='收件人姓名'  bindinput='onInputName' value='{{sendName}}'></input>
+          <view>收件人手机号码</view>
+          <input type='text' placeholder='收件人号码' bindinput='onInputPhone' value='{{sendPhone}}'></input>
+          <view>收件人地址</view>
+          <picker mode="region" bindchange="bindaddressChange">
+            <input type='text' placeholder='请选择地址' disabled='disabled' value="{{sendAddress}}"></input>
+          </picker>
+          <view>详细地址</view>
+           <input type='text' placeholder='请填写详细地址' bindinput='onInputAddress' value='{{sendAddressDetail}}'></input>
+        </view>
+      </view>
+      <view class="tan-4">所需图标 :
+        <em>{{currentInfo.num}}</em>个</view>
+      <view class="tan-4 sub" bindtap='wxaddress'>一键获取微信收货地址</view>
+      <view class="tan-3">
+        <view bindtap='hideDialog'>取消</view>
+        <view wx:if="{{dianliang < currentInfo.num}}" style="background:#C9C9C9;"  class="sub" >无法兑换</view>
+        <!-- <view ></view> -->
+        <view wx:else class="sub" bindtap='confirm'>兑换</view>
+      </view>
+    </view>
+  </view>
+</block>

@@ -1,0 +1,75 @@
+<!--pages/detail1/detail1.wxml-->
+<view class='bg-blur'></view>
+<!-- <view class='show-name'>{{shopInfo.name}}</view> -->
+<view class='card'>
+   <view class='light {{dianliang?"light-active":""}}' bindtap='dianliang'>
+    <image class='light-image {{dianliang?".light-image-active":""}}' src='/resource/images/logo2.png'></image>
+    <view class='wenzi' hidden='{{!diangliang}}'>点亮</view>
+  </view> 
+  <!-- <view class='light1'>
+    <image src='/resource/images/222.png' class='{{dianliang?".light1-active":""}}'></image>
+  </view> -->
+  <view class='show-name'>{{shopInfo.title}}</view>
+  <view class='item'>
+    <view class='item-icon'>
+      <image src='/resource/images/phone1.png'></image>
+    </view>
+    <view class='item-content' style='text-decoration:underline;' bindtap='call'>{{shopInfo.phone}}</view>
+  </view>
+  <view class='item'>
+    <view class='item-icon'>
+      <image src='/resource/images/date.png'></image>
+    </view>
+    <view class='item-content'>{{shopInfo.time}}111</view>
+  </view>
+  <view class='item'>
+    <view class='item-icon'>
+      <image src='/resource/images/address1.png'></image>
+    </view>
+    <view class='item-content' style='text-decoration:underline;' bindtap='openMap'>{{shopInfo.address}}</view>
+  </view>
+  <view class='intro'>
+    <view class='intro-title'>
+      简介:
+    </view>
+    <view class='intro-content'>
+      {{shopInfo.introduction}}
+    </view>
+  </view>
+</view>
+
+
+
+
+
+<!--pages/index/index.wxml-->
+<!--顶部轮播  -->
+<!-- <swiper indicator-dots='true' autoplay='true' interval='3000' duration='1000' circular='true' indicator-color='#FFFFFF' indicator-active-color='#F34347' class='mx-swiper' style='height:{{swiperHeight+"px"}};'>
+<block wx:for="{{shopInfo.photo_list}}">
+  <swiper-item><image src='{{shopInfo.attachurl}}{{item}}'></image></swiper-item>
+  </block>
+</swiper> -->
+<!--店家信息  -->
+<!-- <view class='shop-info'>
+  <view class='shop-top-contain'>
+    <view class='shop-touxiang'><image src='{{shopInfo.thumb}}'></image></view>
+    <view class='shop-name'>{{shopInfo.title}}</view>
+    <button class='share'  bindtap='dianliang'>{{dianliang ?  '已点亮': '点亮图标'}}</button>
+  </view>
+  <view class='shop-other'>
+    <view class='address-icon'><image src='/resource/images/address.png'></image></view>
+    <view class='address-info' data-address='{{shopInfo.address}}' bindtap='openMap'>{{shopInfo.address}}</view>
+  </view>
+  <view class='shop-other'>
+    <view class='phone-icon'><image src='/resource/images/phone.png'></image></view>
+    <view class='phone-info' bindtap='openPhone' data-phone='{{shopInfo.phone}}'>{{shopInfo.phone}}</view>
+  </view>
+</view>
+<view class='specialSale'>
+  <view class='specialSale-title'>店家介绍</view>
+  <view class='specialSale-img'>
+  <text> {{shopInfo.introduction}}</text>
+     
+  </view>
+</view> -->
+

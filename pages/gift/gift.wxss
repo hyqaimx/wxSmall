@@ -1,0 +1,28 @@
+/* pages/gift/gift.wxss */
+page{background: #F5F5F5;}
+.h5{text-align: left;font-size: 36rpx;font-family: "黑体";margin-bottom: 20rpx;font-weight: 600;}
+.w30{text-align: center;}
+.w70{flex:1;}
+.introduce image{width: 100%;height: 100rpx;}
+.xiaoxi{background: #FFFFFF;width: 100%;margin-top:10rpx;display: flex;align-items:center; padding: 20rpx;font-size: 32rpx;}
+.xiaoxi image{width: 120rpx;height: 120rpx;margin-right: 20rpx;border-radius: 3px;}
+.xiaoxi-view{display: flex;text-align: left;}
+.xiaoxi-view view{flex: 1;}
+.last{margin-bottom: 100rpx;}
+.show-contain{position: fixed;width: 100%;height: 100%;top:0;left: 0; background: rgba(0,0,0,.3);}
+.tankuang{position: relative;top: 50%;left: 50%;transform: translate(-50%,-50%); width: 80%;background:rgba(49, 43, 43, 1);padding: 20rpx;border-radius: 3px;}
+.tan-1{width: 100%;display: flex;align-items: center;}
+.tan-1 image{width:120rpx;height: 120rpx;margin-right: 20rpx;}
+.tan-1-info{color: white;font-size: 32rpx;flex: 1;}
+.tan-1-name{font-size: 36rpx;font-weight: 600;margin-bottom: 20rpx;}
+.tan-1-other em{padding-left: 20rpx;color: #00baff;font-style: normal;font-size: 28rpx;}
+.tan-2{width: 100%;}
+.text{color: #FFFFFF;font-size: 30rpx;margin-bottom: 20rpx;}
+.text input{background: white;width: 85%;margin: 0 auto;font-size: 32rpx;padding: 4rpx 20rpx; color: #333;border-radius: 3px;}
+.text view{display: block;width: 100%; text-align: left;margin: 10rpx 0;}
+.tan-3{text-align: center;font-size: 36rpx;}
+.tan-3 view{display: inline-block; background:#00baff;color: #FFFFFF;border-radius: 5px;font-size: 28rpx;letter-spacing: 3px; width: 200rpx;padding: 10rpx 20rpx;}
+.tan-3 view:first-child{margin-right: 100rpx;}
+.not-sub{background:#AAA;}
+.tan-4{font-size: 28rpx;margin-bottom: 20rpx;color: white;text-align: right;margin-right: 40rpx;}
+.tan-4 em{font-style: normal;color: #00baff;padding: 0 10rpx;font-size: 36rpx;font-weight: 600;}

@@ -1,0 +1,33 @@
+/* pages/mine/mine.wxss */
+page{background: #F5F5F5;}
+.top-contain{background: #FFFFFF;text-align: center;box-shadow: 0 0 3px #AAA;margin-bottom: 16rpx;}
+.head-img{background: #FFFFFF;text-align: center;}
+.head-img image{width: 160rpx;height: 160rpx;border-radius: 50%;display: block;margin: 0 auto;}
+.user-name{font-size: 40rpx;padding: 10rpx;}
+.item-name{font-size: 32rpx;}
+.main-items{display: flex;align-items: center;border-top: 2px solid #F5F5F5;}
+.main-item{flex: 1;border-right: 2px solid #F5F5F5;}
+.main-item:last-child{border: none;}
+.main-item:nth-child(1){color: #F34347;}
+.main-item:nth-child(2){color: #ffc107;}
+.main-item:nth-child(3){color: #009688;}
+.mine-icon-list{display: flex;width: 100%;align-items:center;flex-wrap:wrap;padding: 20rpx 0;}
+.mine-icon-item{width: 20%;padding: 0 10rpx 10rpx 10rpx;position: relative;box-sizing: border-box;}
+.mine-icon-item image{width: 100%;max-height: 160rpx; border-radius: 50%;box-shadow: 0px 0px 5px pink;}
+.active image{filter: grayscale(0%);-webkit-filter: grayscale(0%);-moz-filter: grayscale(0%);-ms-filter: grayscale(0%);-o-filter: grayscale(0%);animation:mymove 3s infinite;-webkit-animation:mymove 3s infinite;} 
+.active navigator{animation:mymove 3s infinite;-webkit-animation:mymove 3s infinite;} 
+/*自定义动画*/
+@-webkit-keyframes  mymove{
+	0% { 
+		box-shadow: 0px 0px 0px pink;
+	 }
+	50%{box-shadow: 0px 0px 10px pink;}
+	100% { box-shadow: 0px 0px 0px pink; }
+}
+@keyframes mymove {
+	0% { 
+		box-shadow: 0px 0px 0px pink;
+	 }
+	50%{box-shadow: 0px 0px 10px pink;}
+	100% { box-shadow: 0px 0px 0px pink; }
+}

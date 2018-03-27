@@ -1,0 +1,30 @@
+<!--pages/record/record.wxml-->
+<view class='top'>
+  <view class='top-title'>我的可用图标数：</view>
+  <view class='top-num'>222</view>
+</view>
+<view class="weui-panel weui-panel_access">
+  <view class="weui-panel__hd">我的兑换记录</view>
+  <view class="weui-panel__bd">
+    <view class="weui-media-box weui-media-box_text">
+      <view class="weui-media-box__title weui-media-box__title_in-text mx-flex">
+        <view class='mx-name'>礼包一</view>
+        <view class='mx-value'>2个图标</view>
+      </view>
+      <view class="weui-media-box__desc mx-flex">
+        <view class='mx-date'>2018-03-12 13:34</view>
+        <view class='mx-result'>领取成功</view>
+      </view>
+    </view>
+    <view class="weui-media-box weui-media-box_text">
+      <view class="weui-media-box__title weui-media-box__title_in-text mx-flex">
+        <view class='mx-name'>礼包二</view>
+        <view class='mx-value'>2个图标</view>
+      </view>
+      <view class="weui-media-box__desc mx-flex">
+        <view class='mx-date'>2018-03-12 13:34</view>
+        <view class='mx-result'>领取成功</view>
+      </view>
+    </view>
+  </view>
+</view>
