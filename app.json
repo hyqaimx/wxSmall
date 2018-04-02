@@ -5,7 +5,8 @@
     "pages/mine/mine",
     "pages/detail/detail",
     "pages/editInfo/editInfo",
-    "pages/record/record"
+    "pages/record/record",
+    "pages/wenjuan/wenjuan"
   ],
   "window":{
     "backgroundTextStyle":"light",

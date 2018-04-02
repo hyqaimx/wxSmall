@@ -29,17 +29,17 @@
 <!--操作列表  -->
 <view class='handler-list'>
   <view class="weui-cells weui-cells_after-title" style='box-shadow: 0px 0px 3px #DCDCDC;'>
-    <navigator url="/pages/gift/gift" open-type="switchTab" class="weui-cell weui-cell_access" hover-class="weui-cell_active">
+    <navigator url="/pages/wenjuan/wenjuan" class="weui-cell weui-cell_access" hover-class="weui-cell_active">
       <view class="weui-cell__hd">
         <image src="/resource/images/edit.png" style="margin-right: 5px;vertical-align: middle;width:20px; height: 20px;"></image>
       </view>
-      <!-- <view class="weui-cell__bd">个人信息</view>
-      <view class="weui-cell__ft weui-cell__ft_in-access" style='font-size:30rpx;'>点击修改</view>
+       <view class="weui-cell__bd">问卷调查</view>
+      <view class="weui-cell__ft weui-cell__ft_in-access" style='font-size:30rpx;'>完成问卷，点亮专属图标</view>
     </navigator>
     <navigator open-type="switchTab" url="/pages/gift/gift" class="weui-cell weui-cell_access" hover-class="weui-cell_active">
       <view class="weui-cell__hd">
-        <image src="/resource/images/gift.png" style="margin-right: 5px;vertical-align: middle;width:20px; height: 20px;"></image>
-      </view> -->
+        <image src="/resource/images/gift1.png" style="margin-right: 5px;vertical-align: middle;width:20px; height: 20px;"></image>
+      </view> 
       <view class="weui-cell__bd">礼品兑换</view>
       <view class="weui-cell__ft weui-cell__ft_in-access"></view>
     </navigator>

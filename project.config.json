@@ -20,6 +20,10 @@
 			"current": -1,
 			"list": []
 		},
+		"plugin": {
+			"current": -1,
+			"list": []
+		},
 		"game": {
 			"list": []
 		},
@@ -61,6 +65,12 @@
 					"id": -1,
 					"name": "record",
 					"pathName": "pages/record/record",
+					"query": ""
+				},
+				{
+					"id": -1,
+					"name": "wenjuan",
+					"pathName": "pages/wenjuan/wenjuan",
 					"query": ""
 				}
 			]

@@ -1,0 +1,25 @@
+<!--pages/wenjuan/wenjuan.wxml-->
+<view class='title'>门头沟知识问卷</view>
+<view class='content'>
+  <block wx:for="{{items}}" wx:for-item="item" wx:key="item.id">
+    <view class='item'>
+      <view class='item-title' bindtap='openChoose' data-id='{{item.id}}'>
+        {{item.id}}.{{item.title}}
+      </view>
+      <view class='item-choose' wx:if="{{item.open}}">
+        <view class="weui-cells weui-cells_after-title">
+          <radio-group bindchange="radioChange" data-id="{{item.id}}">
+            <label class="weui-cell weui-check__label" wx:for="{{item.list}}" wx:for-item="childItem" wx:key="value">
+              <radio class="weui-check" value="{{childItem.value}}" checked="{{childItem.checked}}" />
+              <view class="weui-cell__bd">{{childItem.name}}</view>
+              <view class="weui-cell__ft weui-cell__ft_in-radio" wx:if="{{childItem.checked}}">
+                <icon class="weui-icon-radio" type="success_no_circle" size="16"></icon>
+              </view>
+            </label>
+          </radio-group>
+        </view>
+      </view>
+    </view>
+  </block>
+</view>
+<view class='submit' bindtap='resquest'>提交</view>

@@ -1,0 +1,8 @@
+/* pages/wenjuan/wenjuan.wxss */
+page{background: #F5F5F5;}
+.title{text-align: center;font-size: 16pt;margin: 20rpx 0; color: #F34347;}
+.content{padding: 0 40rpx;margin-bottom: 20rpx;}
+.item{margin-bottom: 50rpx;}
+.item-title{font-size: 12pt;margin-bottom: 20rpx;line-height: 20px;}
+.weui-cells ::after{content: none;}
+.submit{width: 80%;margin: 0 auto;color: white;background: #4AACED;text-align: center;font-size: 14pt;border-radius: 3px;padding: 8rpx;margin-bottom: 30rpx;}
